@@ -5,6 +5,7 @@ html {
 body {
     font: 10px "Century Gothic", Futura, sans-serif;
     margin: 20px;
+    background-color: aquamarine;
   }
   
   ol, ul {
@@ -14,6 +15,10 @@ body {
   .game {
     justify-content: center;
   }
+
+  /* .game-board {
+    background-color: aquamarine;
+  } */
   
   .board-row:after {
     clear: both;
@@ -39,6 +44,7 @@ body {
     margin-top: -1px;
     padding: 0;
     text-align: center;
+    background-color: aquamarine;
   }
   
   .square:focus {
@@ -55,6 +61,8 @@ body {
   }
   
   .game-info {
-    margin-left: 20px;
+    margin-left: 1px;
+    padding-left: 20px;
+    background-color: aquamarine;
   }
   
