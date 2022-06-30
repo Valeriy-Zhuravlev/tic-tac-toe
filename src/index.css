@@ -14,11 +14,17 @@ body {
 
   .game {
     justify-content: center;
+    display: flex;
+    flex-direction: row;
   }
 
-  /* .game-board {
-    background-color: aquamarine;
-  } */
+  @media (max-width: 580px) {
+    .game {
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+    }
+  }
   
   .board-row:after {
     clear: both;
@@ -54,15 +60,22 @@ body {
   .kbd-navigation .square:focus {
     background: #ddd;
   }
-  
-  .game {
-    display: flex;
-    flex-direction: row;
-  }
-  
+    
   .game-info {
+    min-width: 240px;
     margin-left: 1px;
     padding-left: 20px;
     background-color: aquamarine;
   }
   
+  .moves {
+    padding: unset;
+  }
+
+  .moves__item {
+    margin-bottom: 1px;
+  }
+  
+  .moves__btn:focus {
+    border: 2px solid #efde15;
+  }

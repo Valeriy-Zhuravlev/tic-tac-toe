@@ -4,10 +4,22 @@ import { Square } from "./Square";
   export const Board = (props) => {
 
     function renderSquare(i) {
+      const isSelectedSqr = props.selectedSqr === i;
+
+      let colorWinner = null;
+      if (props.winner) {
+        if (props.winningSequence.includes(i)) {
+          colorWinner = '#00FFF3';
+        }
+      }
+
       return (
         <Square
           value={props.squares[i]}
           onClick={() => props.onClick(i)}
+          isSelectedSqr={isSelectedSqr}
+          colorWinner={colorWinner}
+          winner={props.winner}
         />
       );
     }
